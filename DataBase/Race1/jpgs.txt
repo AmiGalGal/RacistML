@@ -2,7 +2,7 @@ in this Folder is the material for race1
 it's the same for the rest of the races
 the Folder arrangements is this
 pythonProject/
-    |-- trainer.py
+    |-- RacismCore.py
     DataBase/
     ├── race0/ 
     │   ├── image1.jpg
