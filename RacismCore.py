@@ -8,11 +8,11 @@ from torch.utils.data import DataLoader
 from PIL import Image
 
 # Constants
-DATA_DIR = r'F:\Desktop\pythonProject\DataBase'  # Path to the dataset folder
+DATA_DIR = r'F:\Desktop\pythonProject\DataBase'
 BATCH_SIZE = 32
 LEARNING_RATE = 5e-4
 NUM_EPOCHS = 10
-NUM_CLASSES = 5  # Number of categories (e.g., White, Black, Asian, Indian, Others)
+NUM_CLASSES = 5
 
 # Supported image extensions
 VALID_EXTENSIONS = {'.jpg', '.jpeg', '.png', '.bmp', '.tif', '.webp'}
@@ -45,7 +45,6 @@ def load_images(dataset_dir):
     images = []
     labels = []
 
-    # Assign a numeric label for each class (folder) in the directory
     class_labels = {class_name: idx for idx, class_name in enumerate(os.listdir(dataset_dir))}
 
     for image_path in image_files:
@@ -54,7 +53,6 @@ def load_images(dataset_dir):
         img = transform(img)
         images.append(img)
 
-        # Extract the class label from the directory name (e.g., White, Black, etc.)
         class_name = os.path.basename(os.path.dirname(image_path))
         labels.append(class_labels[class_name])
 
@@ -88,7 +86,6 @@ optimizer = optim.Adam(model.parameters(), lr=LEARNING_RATE)
 for epoch in range(NUM_EPOCHS):
     running_loss = 0.0
     for images, labels in dataloader:
-        print(1)
         images, labels = images.to(device), labels.to(device)
 
         optimizer.zero_grad()
