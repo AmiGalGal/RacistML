@@ -1,1 +1,27 @@
-in this library is the material for race1
+in this Folder is the material for race1
+it's the same for the rest of the races
+the Folder arrangements is this
+pythonProject/
+    |-- trainer.py
+    DataBase/
+    ├── race0/ 
+    │   ├── image1.jpg
+    │   ├── image2.jpg
+    │   └── ...
+    ├── race1/ 
+    │   ├── image1.jpg
+    │   ├── image2.jpg
+    │   └── ...
+    ├── race2/ 
+    │   ├── image1.jpg
+    │   ├── image2.jpg
+    │   └── ...
+    ├── race3/ 
+    │   ├── image1.jpg
+    │   ├── image2.jpg
+    │   └── ...
+    ├── race4/ 
+    │   ├── image1.jpg
+    │   ├── image2.jpg
+    │   └── ...
+    └── ...
